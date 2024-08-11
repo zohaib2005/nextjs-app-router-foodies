@@ -6,6 +6,7 @@ import { getMeals } from "@/lib/meals";
 export default async function MealsPage() {
   const meals = await getMeals();
 
+
   return (
     <>
       <header className={classes.header}>
@@ -21,7 +22,7 @@ export default async function MealsPage() {
         </p>
       </header>
       <main className={classes.main}>
-        <MealsGrid meals={[meals]} />
+        <MealsGrid meals={meals} />
       </main>
     </>
   );
